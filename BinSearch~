@@ -1,0 +1,57 @@
+import java.io.*;
+import java.util.*;
+import java.util.Scanner;
+import java.util.ArrayList;
+public class BinSearch
+{
+	public void BinarySearch(int arr[],int first,int last,int search)
+	{
+		int result;
+
+		int mid=((first+last)/2);
+		
+		if(mid==search)
+			System.out.println("Number found");
+		else if(search < mid)
+		{
+			 BinarySearch(arr,first,mid,search);
+		}
+		else if(search > mid)
+		{
+			 BinarySearch(arr,mid+1,last,search);
+		}
+		else
+			System.out.println("Number not found");
+	}
+	public static void main(String args[])
+	{
+		int srch;
+		Scanner sc=new Scanner(System.in);
+		
+		BinSearch b=new BinSearch();
+
+		System.out.println("Enter number of elements to enter");
+		int no=sc.nextInt();
+		int List[] = new int[no];
+		System.out.println("Enter the list of number");
+		for(int i=0;i<no;i++)
+			wordList[i]=s.nextInt();
+
+		for(int counter: wordList)
+			System.out.println(" "+counter);
+
+		Arrays.sort(wordList);
+
+		System.out.println("After sorting: ");
+
+		for(int counter: wordList)
+			System.out.println(" "+counter);
+
+		System.out.println("Enter the number to be search from list: ");
+		search=s.nextInt();
+		int first=0,last=no;
+		int mid=((first+last)/2);
+
+		b.BinarySearch(wordList,first,last,search);		
+	}
+}
