@@ -1,44 +1,45 @@
-
-import java.util.Scanner;
-//import java.lang.ArrayIndexOutOfBoundException;
-import java.util.Arrays;
-class arrayrecur
+import java.io.*;
+class groupSumOf 
 {
-	public static void main(String args[])
+	public static boolean sum(int[] num)
 	{
-		int arr[]={1,2,3};
-		int sum1;
-		sum1=array(arr,0);
-
-		System.out.println("\nSum is: "+sum1);
-		//return 0;
-	}
+		int p,q,r,s,t;
 		
-	/* int arry_sum(int arr[],int n,int sum)
-	{
-		if(n<0)
-			return sum;
-		else
+		p=2;
+		q=2+4;
+		r=2+4+8;
+		s=4+8;
+		t=2+8;
+
+		if(p==10||q==10||r==10||s==10||t==10)
 		{
-			sum +=arr[n];
-		}
-		//return arr_sum(arr,--n,sum);
-		return sum;		
-	}*/
-	public int array(int[] nums, int index)
-	{
-		if(index==nums.length)
-			return 0;
-		if(nums[index]==11)
-			return 1+array11(nums,index+1);
-		return array11(nums,index+1);
+			return true;
+			//System.out.println("{0{2,4,8}10}");
+		}		
+			
+		else if(p==14||q==14||r==14||s==14||t==14)
+		{		
+			return true;
+			//System.out.println("{0{2,4,8}14}");
+		}		
+				
+		else if(p==9||q==9||r==9||s==9||t==9)
+		{		
+			return true;
+		}		
+		else 
+		{		
+			return false;
+			//System.out.println("{0{2,4,8}09}");
+		}	
 	}
+   	public static void main(String[] args)
+    	{
+		int arr[]={3,4,11};
+	
+		boolean b=sum(arr);
+		System.out.println(b);
+						
+	}
+
 }
-/*public int array11(int[] nums, int index)
-{
-	if(index == nums.length)
-		return 0;
-	if(nums[index] == 11)
-		return 1 + array11(nums, index + 1);
-	return array11(nums, index + 1);
-}*/

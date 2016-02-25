@@ -1,44 +1,27 @@
 
 import java.util.Scanner;
-//import java.lang.ArrayIndexOutOfBoundException;
-import java.util.Arrays;
 class arrayrecur
 {
 	public static void main(String args[])
 	{
-		int arr[]={1,2,3};
-		int sum1;
-		sum1=array(arr,0);
-
-		System.out.println("\nSum is: "+sum1);
-		//return 0;
-	}
-		
-	/* int arry_sum(int arr[],int n,int sum)
-	{
-		if(n<0)
-			return sum;
-		else
+		int a[]=new int[3];
+		int sum=0;
+			
+		Scanner sc=new Scanner(System.in);
+		for(int i=0;i<6;i++)
 		{
-			sum +=arr[n];
+			System.out.println("Enter the number:");
+			a[i]=sc.nextInt();
 		}
-		//return arr_sum(arr,--n,sum);
-		return sum;		
-	}*/
-	public int array(int[] nums, int index)
-	{
-		if(index==nums.length)
-			return 0;
-		if(nums[index]==11)
-			return 1+array11(nums,index+1);
-		return array11(nums,index+1);
+		for(int i=0;i<=a.length;i++)
+		{
+			sum=sum+i;
+		}
+		if(sum==10)
+			System.out.println("true");
+		else
+			System.out.println("false");
+		//System.out.println("Sum is:"+sum);	
 	}
 }
-/*public int array11(int[] nums, int index)
-{
-	if(index == nums.length)
-		return 0;
-	if(nums[index] == 11)
-		return 1 + array11(nums, index + 1);
-	return array11(nums, index + 1);
-}*/
+
