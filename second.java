@@ -1,0 +1,33 @@
+/*1.Accept two integer numbers from user
+2.compare digits of that number
+3.Print the output */
+
+import java.util.Scanner;
+class second
+{
+	public static void main(String args[])
+	{
+		int a,b,p,q,r,s;
+		Scanner sc=new Scanner(System.in);
+
+		System.out.println("Enter the two numbers within 10...99");
+		a=sc.nextInt();
+		b=sc.nextInt();
+
+		if(((a>10)&&(a<99)) || ((b>10)&&(b<99)))
+		{
+			p=a%10;
+			q=a/10;
+			r=b%10;
+			s=b/10;
+			if(((p==r)||(p==s))|| ((q==r)||(q==s)))
+			{
+				System.out.println("true");
+			}
+			else
+				System.out.println("false");		
+		}
+		else
+			System.out.println("Enter number within range");
+	}
+}
