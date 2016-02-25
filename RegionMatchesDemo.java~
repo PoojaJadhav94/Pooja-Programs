@@ -1,17 +1,11 @@
-import java.util.Scanner;
-public class RegionMatches
+
+public class RegionMatchesDemo 
 {
 	public static void main(String[] args) 
 	{
-        	String base;;
-        	String remove;
+        	String base="Green Eggs and Ham";
+        	String remove="Eggs";
         
-		Scanner sc=new Scanner(System.in);
-		System.out.println("Enter the string");
-		base=sc.next();
-		System.out.println("Enter the string you want to search:");
-		remove=sc.next();
-
 		int baseLength=base.length();
         	int removeLength=remove.length();
         	boolean foundIt=false;
@@ -21,7 +15,6 @@ public class RegionMatches
            		if(base.regionMatches(i,remove,0,removeLength)) 
 			{
               			foundIt = true;
-				System.out.println("Search String is:");
               			System.out.println(base.substring(i, i+removeLength));
               			break;
            		}
