@@ -35,6 +35,7 @@ class groupSumOf
 	}
    	public static void main(String[] args)
     	{
+		int start=0,
 		int arr[]={3,4,11};
 	
 		boolean b=sum(arr);

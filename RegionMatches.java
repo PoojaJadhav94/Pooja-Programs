@@ -27,6 +27,6 @@ public class RegionMatches
            		}
         	}
         	if(!foundIt)
-            		System.out.println("No match found.");
+            		System.out.println("String not found");
     	}
 }
